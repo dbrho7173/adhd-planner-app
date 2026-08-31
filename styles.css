@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: hsl(346, 100%, 97%);
+    padding-top: 60px;
+}
+
+/* Navigation Bar Styles */
+.navBar {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 0;
+    background: hsl(346, 100%, 85%);
+    border-radius: 30px 30px 0 0;
+    border: 1px solid hsl(346, 100%, 90%);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+.navBar a {
+    color: white;
+    cursor: pointer;
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+    background: transparent;
+    transition: all .25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.navBar a:active {
+    transform: scale(1.2);
+}
+.navBar a.active {
+    color: hsl(346, 100%, 50%);
+    
+}
+.navBar a i {
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+.navBar a.plus {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-top: -30px;
+    color: #fff;
+    background: hsl(346, 100%, 75%);
+    border-radius: 50%;
+    box-shadow: 0 10px 30px 0 hsl(346, 100%, 80%);
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding: 30px 35px;
+    align-items: center;
+}
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+.header h1 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.header p {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+#brain-dump-img {
+    position: absolute;
+    right: 15px;
+    top: 55px;
+    width: 265px;
+    height: 180px;
+}
+
+/* Brain Dump Section Styles */
+.brain-dump-section {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid hsl(346, 100%, 89%);
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 0 30px rgba(221, 86, 169, 0.1);
+}
+.brain-dump-section textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+    background: white;
+    border: none;
+    font-weight: bold;
+    font-size: .9rem;
+}
+.brain-dump-section div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+.brain-dump-section textarea:focus {
+    outline: none;
+}
+
+/* Button Styles */
+.note-button {
+    display: flex;
+    gap: 8px;
+    flex: 2;
+    padding: 10px;
+    border-radius: 10px;
+    background: hsl(346, 100%, 97%);
+    border: 1px solid hsl(346, 100%, 90%);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+.note-button i {
+    color: hsl(346, 100%, 50%);
+    font-size: 1.5rem;
+}
+.task-button {
+    display: flex;
+    flex: 2;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    background: hsl(120, 60%, 95%);
+    border: 1px solid hsl(120, 60%, 90%);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.task-button i {
+    color: hsl(120, 60%, 40%);
+    font-size: 1.5rem;
+}
+.event-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 50px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: hsl(346, 100%, 75%);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+.event-button i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Parking Lot Section Styles */
+#decoration-img {
+    position: absolute;
+    transform: rotate(100deg);
+    top: 395px;
+    left: 110px;
+    width: 100px;
+    height: 60px;
+}
+.parking-lot-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.parking-lot-section div:not(.parking-lot-list) {
+    display: flex;
+}
+.parking-lot-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+    border-radius: 50%;
+    background: hsl(346, 100%, 75%);
+    color: white;
+}
+.parking-lot-section h2 {
+    font-size: 1.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.parking-lot-list {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid hsl(346, 100%, 89%);
+    border-radius: 20px;
+    background: white;
+}
+
+/* Parking Lot Item Styles */
+.parking-lot-item {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid hsl(346, 100%, 89%);
+    gap: 25px;
+}
+.parking-lot-item div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.parking-lot-item div label {
+    flex: 3;
+}
+.parking-lot-item div:first-child {
+    align-items: flex-start;
+    flex: 1;
+    align-items: center;
+}
+.parking-lot-item div:last-child {
+    flex: 1;
+}
+.parking-lot-item:last-child {
+    border-bottom: none;
+    align-items: flex-end;
+}
+.parking-lot-item button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+.parking-lot-item button i {
+    color: hsl(346, 100%, 50%);
+    font-size: 1.5rem;
+}
+.parking-checkbox {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid hsl(346, 100%, 75%);
+    background: hsl(346, 100%, 99%);
+    cursor: pointer;
+}
+.note-icon {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border-radius: 25%;
+    background: hsl(200, 100%, 95%);
+    border: 1px solid hsl(200, 100%, 90%);
+}
+.note-icon i {
+    color: hsl(200, 100%, 40%);
+    font-size: 1.4rem;
+}
+

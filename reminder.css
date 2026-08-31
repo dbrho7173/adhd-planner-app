@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: hsl(274, 89%, 97%);
+    padding-top: 50px;
+}
+
+/* Navigation Bar Styles */
+.navBar {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 0;
+    background: hsl(274, 89%, 85%);
+    border-radius: 30px 30px 0 0;
+    border: 1px solid hsl(274, 89%, 90%);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+.navBar a {
+    color: white;
+    cursor: pointer;
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+    background: transparent;
+    transition: all .25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.navBar a:active {
+    transform: scale(1.2);
+}
+.navBar a.active {
+    color: hsl(274, 89%, 50%);
+    
+}
+.navBar a i {
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+.navBar a.plus {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-top: -30px;
+    color: #fff;
+    background: hsl(274, 89%, 75%);
+    border-radius: 50%;
+    box-shadow: 0 10px 30px 0 hsl(274, 89%, 80%);
+}
