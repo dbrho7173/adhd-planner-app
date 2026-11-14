@@ -3,108 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Brain Dump | ADHD Planner</title>
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navBar">
-        <a href="index.html" class="active" aria-label="home">
-            <i class="bx bx-home"></i>
-        </a>
-        <a href="reminder.html" aria-label="checklist">
-            <i class="bx bx-checklist"></i>
-        </a>
-        <a href="add.html" class="plus" aria-label="add">
-            <i class="bx bx-bell"></i>
-        </a>
-        <a href="progress.html" aria-label="progress">
-            <i class="bx bx-bar-chart"></i>
-        </a>
-        <a href="profile.html" aria-label="profile">
-            <i class="bx bx-face"></i>
-        </a>
-    </nav>
+    <nav id="nav"></nav>
 
     <main>
         <div class="header">
-            <h1>Brain Dump</h1>
+            <h1 id="greeting">Brain Dump</h1>
             <p>What's on your mind?</p>
+            <img src="brain_img.png" alt="" class="header-img" onerror="this.remove()">
         </div>
 
-        <img src="brain_img.png" alt="brain dump illustration" id="brain-dump-img">
-
-        <section class="brain-dump-section">
-            <textarea placeholder="Jot it here so you don't forget..."></textarea>
-            <div>
-                <button class="note-button">
-                    <i class="bx bx-note"></i>
-                    <span>NOTE</span>
+        <section class="card brain-dump-section">
+            <textarea id="dump-input" placeholder="Jot it here so you don't forget..." maxlength="200"></textarea>
+            <div class="btn-row">
+                <button class="note-button" id="add-note">
+                    <i class="bx bx-note"></i><span>NOTE</span>
                 </button>
-                <button class="task-button">
-                    <i class="bx bx-check-circle"></i>
-                    <span>TASK</span>
+                <button class="task-button" id="add-task">
+                    <i class="bx bx-check-circle"></i><span>TASK</span>
                 </button>
-                <button class="event-button" aria-label="add event">
+                <button class="event-button" id="add-event" aria-label="turn into a reminder">
                     <i class="bx bx-plus"></i>
                 </button>
             </div>
         </section>
+
         <section class="parking-lot-section">
-            <div>
+            <div class="section-head">
                 <h2>Parking Lot</h2>
-                <img src="decoration.png" alt="decoration" id="decoration-img">
-                <div class="parking-lot-counter">
-                    4
-                </div>
+                <img src="decoration.png" alt="" onerror="this.remove()">
+                <div class="counter" id="counter">0</div>
             </div>
-        
-            <div class="parking-lot-list">
-                <div class="parking-lot-item" class="task-item">
-                    <div>
-                        <input type="checkbox" class="parking-checkbox" id="parking-checkbox">
-                    </div>
-                    <div>
-                        <label for="parking-checkbox" class="parking-label">
-                        Finish biology assignment
-                        </label>
-                    </div>
-                    <div>
-                        <button class="delete-button" aria-label="delete item">
-                            <i class="bx bx-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="parking-lot-item" class="note-item">
-                    <div class="note-icon">
-                        <i class="bx bx-note"></i>
-                    </div>
-                    <div>
-                        Finish biology assignment
-                    </div>
-                    <div>
-                        <button class="delete-button" aria-label="delete item">
-                            <i class="bx bx-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="parking-lot-item" class="task-item">
-                    <div>
-                        <input type="checkbox" class="parking-checkbox" id="parking-checkbox">
-                    </div>
-                    <div>
-                        <label for="parking-checkbox" class="parking-label">
-                        Finish biology assignment
-                        </label>
-                    </div>
-                    <div>
-                        <button class="delete-button" aria-label="delete item">
-                        <i class="bx bx-trash"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <div class="list" id="parking-list"></div>
         </section>
     </main>
+
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

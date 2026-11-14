@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress | ADHD Planner</title>
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="nav"></nav>
+
+    <main>
+        <div class="header">
+            <h1>Progress</h1>
+            <p id="cheer">Look how far you've come!</p>
+        </div>
+
+        <div class="card goal-card">
+            <div class="ring" id="ring"><div class="ring-inner" id="ring-text">0/3</div></div>
+            <div>
+                <div class="label">Today's goal</div>
+                <div id="goal-msg" class="rem-meta"></div>
+            </div>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat"><div class="num" id="s-streak">0</div><div class="lbl">🔥 Day streak</div></div>
+            <div class="stat"><div class="num" id="s-done">0</div><div class="lbl">Total done</div></div>
+            <div class="stat"><div class="num" id="s-open">0</div><div class="lbl">Still open</div></div>
+            <div class="stat"><div class="num" id="s-rate">0%</div><div class="lbl">Completion rate</div></div>
+        </div>
+
+        <div class="card">
+            <div class="label">Last 7 days</div>
+            <div class="bars" id="bars"></div>
+        </div>
+
+        <div class="card">
+            <div class="label">Finished reminders by loudness</div>
+            <div id="prio"></div>
+        </div>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+    <script src="progress.js"></script>
+</body>
+</html>

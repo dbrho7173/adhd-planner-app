@@ -3,27 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Add Reminder | ADHD Planner</title>
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="reminder.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navBar">
-        <a href="index.html" class="active" aria-label="home">
-            <i class="bx bx-home"></i>
-        </a>
-        <a href="reminders.html" aria-label="checklist">
-            <i class="bx bx-checklist"></i>
-        </a>
-        <a href="add.html" class="plus" aria-label="add">
-            <i class="bx bx-bell"></i>
-        </a>
-        <a href="progress.html" aria-label="progress">
-            <i class="bx bx-bar-chart"></i>
-        </a>
-        <a href="profile.html" aria-label="profile">
-            <i class="bx bx-face"></i>
-        </a>
-    </nav>
+    <nav id="nav"></nav>
+
+    <main>
+        <div class="header">
+            <h1 id="page-title">Add Reminder</h1>
+            <p>We'll make sure you don't forget!</p>
+        </div>
+
+        <form class="card" id="reminder-form" novalidate>
+            <label for="reminder">Remind Me To...</label>
+            <textarea id="reminder" name="reminder" maxlength="100" placeholder="e.g. Submit financial aid form"></textarea>
+            <div id="char-count"><span>0/100</span></div>
+
+            <label for="date">When:</label>
+            <div class="date-time-container">
+                <input type="date" id="date" name="date" required>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <label>How Loud?</label>
+            <div class="priority-container" id="priority">
+                <button type="button" id="small"  data-value="gentle">Gentle</button>
+                <button type="button" id="medium" data-value="important">Important</button>
+                <button type="button" id="large"  data-value="cant-miss">Can't Miss</button>
+            </div>
+
+            <label>Remind Me...</label>
+            <div class="remind-options">
+                <label class="opt"><input type="radio" name="remind" value="day-before"> Day before</label>
+                <label class="opt"><input type="radio" name="remind" value="hour-before"> 1 hour before</label>
+                <label class="opt"><input type="radio" name="remind" value="at-time" checked> At time of reminder</label>
+                <label class="opt"><input type="radio" name="remind" value="nag" id="nag-opt"> <span id="nag-label">Keep reminding me until done</span></label>
+            </div>
+        </form>
+
+        <button type="submit" form="reminder-form" id="save-reminder" class="primary-btn">SAVE REMINDER</button>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+    <script src="add.js"></script>
 </body>
 </html>

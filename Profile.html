@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | ADHD Planner</title>
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="nav"></nav>
+
+    <main>
+        <div class="header">
+            <h1>Profile</h1>
+            <p>Make it yours.</p>
+        </div>
+
+        <div class="card">
+            <div class="avatar-big" id="avatar-big">🧠</div>
+            <div class="avatar-picker" id="avatar-picker"></div>
+
+            <label for="name">Your name</label>
+            <input type="text" id="name" class="text-input" maxlength="20">
+
+            <label for="goal">Daily goal</label>
+            <select id="goal" class="select-input"></select>
+
+            <div class="setting-row">
+                <div>Browser notifications<small>Pop-ups while the app is open in a tab</small></div>
+                <label class="switch">
+                    <input type="checkbox" id="notif">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="card">
+            <label>Your data</label>
+            <p class="rem-meta">Everything is stored locally in this browser. Nothing leaves your device.</p>
+            <button class="secondary-btn" id="export">Export my data (JSON)</button>
+            <button class="secondary-btn" id="reseed">Reload demo data</button>
+            <button class="danger-btn" id="clear">Clear everything</button>
+        </div>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
